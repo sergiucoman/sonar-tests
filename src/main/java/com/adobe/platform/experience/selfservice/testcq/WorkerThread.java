@@ -2,7 +2,7 @@ public class WorkerThread extends Thread {
   @Override 
   public void run() {
     while (true) {
-      System.out.println('working');
+      System.out.println("working");
     }
   }
 

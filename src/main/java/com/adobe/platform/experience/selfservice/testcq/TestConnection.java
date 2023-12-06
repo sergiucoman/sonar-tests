@@ -4,7 +4,7 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TestThread extends Thread {
+public class TestConnection extends Thread {
 
     private static Map map = new HashMap();
 

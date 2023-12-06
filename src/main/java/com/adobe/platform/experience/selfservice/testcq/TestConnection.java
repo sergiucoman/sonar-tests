@@ -28,7 +28,7 @@ public class TestConnection extends Thread {
     public static void main(String[] args) {
         try {
 
-            TestThread t1 = new TestThread();
+            TestConnection t1 = new TestConnection();
             t1.run();
         } catch (Throwable e) {
         }

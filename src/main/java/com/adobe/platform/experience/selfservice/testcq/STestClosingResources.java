@@ -10,6 +10,15 @@ import javax.sql.DataSource;
 
 public class STestClosingResources {
 
+    private InitialContext ctx;
+
+    private DataSource ds;
+
+    public STestClosingResources (InitialContext ctx, DataSource ds) {
+        this.ctx = ctx;
+        this.ds = ds;
+    }
+
     public final void service()
             throws Exception
     {
@@ -17,8 +26,6 @@ public class STestClosingResources {
         ResultSet rsGet = null;
         PreparedStatement psGet = null;
         try {
-            InitialContext ctx = new InitialContext();
-            DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/testci");
             con = ds.getConnection();
 
             psGet = con.prepareStatement("SELECT * FROM TEST");
